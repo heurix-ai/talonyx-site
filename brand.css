@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Beacon / Talonyx shared brand stylesheet
+   SINGLE SOURCE OF TRUTH for palette + typography.
+   To change the color scheme later, edit the variables in :root below once;
+   every page that links this file updates. (SVG logo marks carry their own
+   literal hex as a fixed brand asset — see favicon.svg / page headers.)
+   ========================================================================== */
+
+/* ---- Inter, self-hosted (renders offline, no external dependency) ---- */
+@font-face{font-family:'Inter';font-weight:400;font-style:normal;src:url('fonts/inter-400.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:'Inter';font-weight:500;font-style:normal;src:url('fonts/inter-500.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:'Inter';font-weight:600;font-style:normal;src:url('fonts/inter-600.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:'Inter';font-weight:700;font-style:normal;src:url('fonts/inter-700.woff2') format('woff2');font-display:swap;}
+
+/* ---- Palette (the one-edit swap point) ---- */
+:root{
+  --steel:#2C4A63;        /* primary */
+  --steel-dark:#223a4e;   /* hover / pressed */
+  --amber:#C68A3D;        /* status + primary action only */
+  --amber-dark:#b57a30;   /* amber hover */
+  --bone:#F4F2ED;         /* background */
+  --ink:#1A1D1F;          /* body text */
+  --muted:#6B6458;        /* secondary text */
+  --line:#DFDAD0;         /* hairlines / borders */
+  --brand-font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+}
+
+/* ---- Base typography applied everywhere this file is linked ---- */
+html,body{font-family:var(--brand-font);}
+
+/* ---- Reusable logo mark (CSS-driven, so it swaps with the palette too) ---- */
+.bk-mark .bk-stroke{fill:none;stroke:var(--steel);stroke-linejoin:miter;}
+.bk-mark .bk-dot{fill:var(--amber);}
+.bk-mark.on-dark .bk-stroke{stroke:#fff;}

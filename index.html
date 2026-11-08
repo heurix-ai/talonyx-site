@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beacon by Talonyx — Call access for independent agents</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 16px; line-height: 1.6; color: var(--ink); background: var(--bone);
+    }
+    .wrap { max-width: 680px; margin: 0 auto; padding: 48px 24px 80px; }
+    header { display: flex; align-items: center; gap: 10px; margin-bottom: 56px; }
+    header .word { font-size: 20px; font-weight: 700; color: var(--steel); }
+    header .sub { font-size: 11px; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; margin-top: 1px; }
+    h1 { font-size: 30px; font-weight: 700; color: var(--ink); line-height: 1.3; margin-bottom: 16px; max-width: 540px; }
+    .tagline { font-size: 16px; color: #3a3a3a; margin-bottom: 40px; max-width: 540px; }
+    section { margin-bottom: 40px; }
+    section h2 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin-bottom: 14px; }
+    section p { font-size: 15px; color: #2a2a2a; margin-bottom: 10px; max-width: 580px; }
+    ol.steps { list-style: none; counter-reset: step; }
+    ol.steps li { counter-increment: step; margin-bottom: 14px; padding-left: 34px; position: relative; font-size: 15px; }
+    ol.steps li::before {
+      content: counter(step); position: absolute; left: 0; top: 0;
+      width: 22px; height: 22px; border-radius: 50%; background: var(--steel); color: #fff;
+      font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+    }
+    .cta { margin: 48px 0; display: flex; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .cta a.primary {
+      display: inline-block; padding: 14px 28px; background: var(--amber); color: #fff;
+      font-size: 15px; font-weight: 600; text-decoration: none; border-radius: 6px;
+    }
+    .cta a.primary:hover { background: var(--amber-dark); }
+    .cta a.secondary {
+      color: var(--steel); font-weight: 600; text-decoration: none; font-size: 14px;
+    }
+    .cta a.secondary:hover { text-decoration: underline; }
+    @media (max-width: 480px) {
+      .cta { flex-direction: column; align-items: stretch; gap: 12px; }
+      .cta a.primary { text-align: center; }
+      .cta a.secondary { text-align: center; }
+    }
+    footer { border-top: 1px solid var(--line); padding-top: 24px; margin-top: 56px; }
+    footer p { font-size: 12.5px; color: var(--muted); max-width: 580px; }
+  </style>
+  <link rel="stylesheet" href="brand.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <svg width="13" height="26" viewBox="33 17 34 68" aria-hidden="true">
+        <polygon points="50,82 36,46 50,54 64,46" fill="none" stroke="#2C4A63" stroke-width="6" stroke-linejoin="miter"/>
+        <circle cx="50" cy="28" r="12" fill="#C68A3D"/>
+      </svg>
+      <div>
+        <div class="word">Beacon</div>
+        <div class="sub">by Talonyx</div>
+      </div>
+    </header>
+
+    <h1>Call access for independent insurance agents, priced the way you want it.</h1>
+    <p class="tagline">Pick a price tier, see your calls land in a dashboard, pay for what connects. Nothing else.</p>
+
+    <section>
+      <h2>What this is</h2>
+      <p>Beacon is a call routing and data platform. It is not an insurance company, a carrier, or an agency, and it does not sell insurance or give insurance advice. It connects your account to call exchanges and routes calls to your phone in real time.</p>
+    </section>
+
+    <section>
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li>Request access and tell us your license and state.</li>
+        <li>Set your price tier, cheaper and slower, or pricier and faster.</li>
+        <li>Calls route to your phone as they come in. You see them land in your dashboard.</li>
+        <li>Your account is charged based on actual call connections, not promises.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>What matters</h2>
+      <p>No guaranteed sales outcomes. No refunds for calls that connect but don't close. Pricing is transparent before you commit, and every call you're charged for shows up in your own call log.</p>
+    </section>
+
+    <div class="cta">
+      <a class="primary" href="signup.html">Request access</a>
+      <a class="secondary" href="/pricing.html">See live pricing &amp; become a member &rarr;</a>
+    </div>
+
+    <footer>
+      <p>Beacon is a call routing and data platform, not an insurance company, carrier, or agency. Beacon does not place calls on your behalf, does not provide licensing or legal advice, and does not guarantee sales outcomes. You are responsible for your own compliance as a licensed agent.</p>
+    </footer>
+  </div>
+</body>
+</html>
